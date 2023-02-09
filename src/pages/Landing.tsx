@@ -1,8 +1,15 @@
+import { useTranslation } from 'react-i18next'
+import reactLogo from '@/assets/react.svg'
+import Navbar from '@/components/Navbar/Navbar'
+
 const Landing = () => {
+  const { t } = useTranslation()
   return (
-    <div>
-      <h1>Landing</h1>
-    </div>
+    <>
+      <Navbar />
+      <h1>Landing {t('landing.title')}</h1>
+      <img src={reactLogo} alt="reactLogo" />
+    </>
   )
 }
 
