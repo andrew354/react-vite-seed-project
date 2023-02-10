@@ -7,7 +7,7 @@ const Landing = () => {
   return (
     <>
       <Navbar />
-      <h1>Landing {t('landing.title')}</h1>
+      <h1>Landing page</h1>
       <img src={reactLogo} alt="reactLogo" />
     </>
   )
