@@ -10,6 +10,7 @@
 - [Starter template](#starter-template)
 - [Project setup](#project-setup)
 - [Project distribution](#project-distribution)
+- [Micro Frontend Architecture](#micro-frontend-architecture)
 
 ## Starter template
 
@@ -27,16 +28,9 @@ This starter template includes:
   - [commitlint](https://commitlint.js.org/) to check your commit messages with the [conventional commit format](https://conventionalcommits.org/)
 - [Standard Version](https://github.com/conventional-changelog/standard-version) - Automate versioning using [semver](https://semver.org/) and CHANGELOG generation powered by [Conventional Commits](https://conventionalcommits.org/)
 
-### Getting Started
-
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/Dekalabs/template-vite-react-typescript)
-
-```sh
-npx degit Dekalabs/template-vite-react-typescript vite-vue3-app --mode=git
-cd vite-vue3-app
-```
-
 ### Roadmap
+
+:warning: The below dependencies marked as _optional_ are not included in the package.json.
 
 - Form validation:
   - [React Hook Form](https://react-hook-form.com/)
@@ -45,11 +39,11 @@ cd vite-vue3-app
   - [Axios](https://axios-http.com/)
 - Testing:
   - [Jest](https://jestjs.io/)
-  - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)introduction)
+  - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - Store (state management pattern):
   - [React Context API](https://beta.reactjs.org/reference/react#context-hooks)
   - [MobX](https://mobx.js.org/react-integration.html) - optional
-- Docker and TravisCI ?
+- Docker - optional
 - Components Library :
   - [Headless UI](https://headlessui.com/) - optional
   - [Material UI](https://mui.com/material-ui/getting-started/overview/) - optional
@@ -62,12 +56,12 @@ cd vite-vue3-app
 
 ### Node version
 
-- [Node v16.15.1](https://nodejs.org/en/blog/release/v16.15.1/):
+- [Node v18.12.1](https://nodejs.org/en/blog/release/v18.12.1/):
 
 Manage node version with [nvm](https://github.com/nvm-sh/nvm)
 
 ```sh
-nvm use
+nvm use 18
 ```
 
 or install the node version with [nvm](https://gist.github.com/d2s/372b5943bce17b964a79)
@@ -98,26 +92,22 @@ yarn test
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project distribution
+## Micro Frontend Architecture
 
-For compile a distribution of the project we simply need to lauch vite build and it will do all the magic (optimization, minify, chunk files...)
+This is just extension of micro services architecture to front-end layer. As project grows with multiple functionalities it becomes unmanageable in terms of dependencies, builds deployments.
 
-```sh
-npm run build
-```
+Based on micro frontends concept front-end app will be separated to different use case areas. This use case area either have responsible front team members or in big applications separate teams handling end-to-end micro areas.
 
-It will create a `dist` folder. Then, we can simply move this files into a web server, or launch it to test with vite preview:
-
-```
-npm run serve
-```
-
-This is it. But we need to know some things about the environments.
-
-In the project there are 3 environments. All we need are in the `.env` files and in the npm run build tasks.
-
-In the `.env` files all is settled except the `VUE_APP_API_URL` variable for security reasons. You will need to set this variable in your **local env** files that are not published to git and will extend this env files. For example:
-
-`.env.local` will extend and overwrite `.env` file
-`.env.pre.local` will extend and overwrite `.env.pre` file
-`.env.pro.local` will extend and overwrite `.env.pre` file
+- [src](src/README.md)
+  - [`assets`](src/assets/README.md)
+  - [`components`](src/components/README.md)
+  - [`hooks`](src/hooks/README.md)
+  - [`i18n`](src/i18n/README.md)
+  - [`pages`](src/pages/README.md)
+    - [`examplePage`](src/pages/examplePage/README.md)
+      - [`__test__`](src/pages/examplePage/__test__/README.md)
+      - [`ExamplePage.tsx`](src/pages/examplePage/ExamplePage.tsx/README.md)
+  - [`providers`](src/providers/README.md)
+  - [`router`](src/router/README.md)
+  - [`services`](services/README.md)
+  - [`styles`](src/styles/README.md)
