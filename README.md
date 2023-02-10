@@ -1,6 +1,5 @@
 <div align="center">
   <h2>Template <br/> Template + Vite + React + Typescript</h2>
-  <p>an awesome project from <a href="https://dekalabs.com">Dekalabs</a> 🚀 ⚡️</p>
 </div>
 
 ## Table of Contents
