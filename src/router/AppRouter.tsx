@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
-import Landing from '@/pages/Landing'
+
+import Landing from '@/pages/landing/Landing'
 
 export const AppRouter = () => {
   return (
