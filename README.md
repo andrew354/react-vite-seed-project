@@ -95,9 +95,10 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 ## Micro Frontend Architecture
 
 This is just extension of micro services architecture to front-end layer. As project grows with multiple functionalities it becomes unmanageable in terms of dependencies, builds deployments.
+
 Based on micro frontends concept front-end app will be separated to different use case areas. This use case area either have responsible front team members or in big applications separate teams handling end-to-end micro areas.
 
-- [src](src/README.md): `src`
+- [src](src/README.md)
   - [`assets`](src/assets/README.md)
   - [`components`](src/components/README.md)
   - [`hooks`](src/hooks/README.md)
