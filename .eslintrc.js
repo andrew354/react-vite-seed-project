@@ -12,7 +12,6 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
-    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -55,7 +54,7 @@ module.exports = {
     'no-restricted-imports': [
       'warn',
       {
-        patterns: ['@/features/*/*'],
+        patterns: ['@/pages/*/*'],
       },
     ],
     '@typescript-eslint/no-explicit-any': 'off',
