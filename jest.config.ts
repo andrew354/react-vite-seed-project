@@ -1,14 +1,4 @@
 export default {
-  // testEnvironment: 'jest-environment-jsdom',
-  // setupFilesAfterEnv: ['./setupTests.ts'],
-  // transform: {
-  //   '^.+\\.tsx?$': 'ts-jest',
-  // },
-  // moduleNameMapper: {
-  //   '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
-  //   '^@/(.*)$': '<rootDir>/src/$1',
-  //   '^src/(.*)$': '<rootDir>/src/$1',
-  // },
   roots: ['<rootDir>/src'],
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
   setupFiles: ['react-app-polyfill/jsdom'],

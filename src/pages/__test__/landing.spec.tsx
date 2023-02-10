@@ -1,9 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
+
 import Landing from '../Landing'
 
-describe('Security Setting', () => {
-  it('display security panel tabs', () => {
+describe('Landing', () => {
+  it('displays heading', () => {
     render(<Landing />, {
       wrapper: BrowserRouter,
     })
